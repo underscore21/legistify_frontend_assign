@@ -1,0 +1,31 @@
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+
+  <div id="form-container">
+  
+      <div class="page-header text-center">
+          <h2>Legistify Lawyer Sign Up</h2>
+          
+          <div id="status-buttons" class="text-center">
+              <a ng-class="{active: curr == 'profile'}"><span>1</span>User-Details</a>
+              <a ng-class="{active: curr == 'legal'}"><span>2</span>Legal Info.</a>
+              <a ng-class="{active: curr == 'basic'}"><span>3</span>Basic Details</a>
+	            <a ng-class="{active: curr == 'bar'}"><span>4</span>Bar Council info.</a>
+          </div>
+      </div>
+      
+      <!-- use ng-submit to catch the form submission and use our Angular function -->
+      <form id="signup-form" name="myform">
+          <div id="form-views" ui-view></div>
+      </form>
+  
+  </div>
+  
+  <!-- show our formData as it is being typed -->
+  <pre>
+    {{ formData }}
+  </pre>
+
+</div>
+</div>
+

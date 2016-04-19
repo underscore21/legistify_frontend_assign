@@ -1,0 +1,45 @@
+<div style="height:600px;   overflow-y : scroll;overflow-x:hidden ">
+<div class="form-group" >
+    <label for="parea">Practice areas</label>
+    <div class="selects">
+<select name="skills" multiple="">
+<option value="1">area 1</option>
+<option value="2">area 2</option>
+<option value="3">area 3</option>
+<option value="4">area 4</option>
+<option value="5">area 5</option>
+<option value="6">area 6</option>
+</select>
+</div>
+</div>
+
+
+<div class="form-group">
+    <h2>{{courts[0].name}}</h2>
+      <div ng-repeat="court in courts[0].contacts">
+              <label for="state">name</label>
+              <input type="text" class="form-control" ng-model="court.name"/>
+              <br>
+      </div>
+      <button ng-click="addFields(courts[0])" style="color: black !important">Add</button>
+</div>
+<div class="form-group">
+    <label for="state"> State</label>
+    <input type="text" class="form-control" name="state" ng-required="true" ng-model="formData.state" required>
+</div>
+<div class="form-group">
+    <label for="addr"> Address</label>
+    <input type="text" class="form-control" name="addr" ng-required="true" ng-model="formData.addr" required>
+</div>
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+<br>
+    <a ng-click="p1()" class="btn btn-block btn-info">
+    Prev. Section <span class="glyphicon glyphicon-circle-arrow-left"></span>
+    </a>
+    <BUTTON ng-click="n3()" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </BUTTON>
+</div>
+</div>
+</div>

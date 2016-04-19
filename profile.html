@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" />
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css">
+<script src="/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="app.js"></script>
+    <script src="/semantic/dist/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js"></script>
+    
+    <title>Legistify SignUp</title>
+
+    <link rel="stylesheet" href="assets/demo.css">
+    <link rel="stylesheet" href="assets/form-validation.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+</head>
+
+<body ng-app="profApp">
+	<header style="background-color:grey">
+		<h1>Legistify</h1>
+        <div style="text-align: right">
+        <a href="index.html">Sign Up </a>
+    </header>
+    <div class="main-content" style="background-image: url(dd.jpg); height:200px;width:100%;">
+
+        <div class="form-validation" style="margin-top:0px;width:80%">
+
+            <div class="form-title-row">
+                <h1>User Profile<h1>
+            </div>
+            <img src="default.jpg" style="width:60%;height: 200px">
+            <div>
+                NAME and basic details will display here in this div
+            </div>
+            <br>
+            <br>
+            <div id="form-container" style="height: 50px;text-align: center;">
+             <div id="status-buttons" class="text-center">
+              <br>
+              <a ui-sref-active="active" ui-sref="about">ABOUT</a>
+              <a ui-sref-active="active" ui-sref="review">Reviews</a>
+         </div>
+         </div>
+
+            
+                <div ui-view></div>
+            
+
+        </div>
+
+    </div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+
+        // Here is how to show an error message next to a form field
+
+        var errorField = $('.form-input-name-row');
+
+        // Adding the form-invalid-data class will show
+        // the error message and the red x for that field
+
+        errorField.addClass('form-invalid-data');
+        errorField.find('.form-invalid-data-info').text('Please enter your name');
+
+
+        // Here is how to mark a field with a green check mark
+
+        var successField = $('.form-input-email-row');
+
+        successField.addClass('form-valid-data');
+    });
+
+</script>
+
+</body>
+
+</html>
